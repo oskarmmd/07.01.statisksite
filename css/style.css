@@ -1,0 +1,245 @@
+/* Reset styling */
+body, ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+main {
+    max-width: 1200px;
+    margin: auto;
+    font-family: "Roboto";
+}
+
+.racing-sans-one-regular {
+    font-family: "Racing Sans One", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .roboto {
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+  }
+
+
+/* Navbar styling */
+nav {
+    font-family: "Racing Sans One", serif;
+    background: #222;
+}
+.nav-container {
+    max-width: 1440px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+.logo {
+    background: red;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: block;
+}
+
+/* Navigation links */
+.nav_links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav_links li {
+    position: relative;
+}
+
+.nav_links a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    display: block;
+}
+.nav_links a:hover {
+    color: red;
+}
+
+
+/* Dropdown-menu styling */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: white;
+    min-width: 160px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+
+
+.category_list_container, .product_list_container, .product_details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.categories a, .product_card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.product_card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    background: white;
+}
+
+.product_card img {
+    width: 100%;
+}
+
+.brand {
+    font-size: 0.9em;
+    color: gray;
+}
+
+.price {
+    font-weight: bold;
+    color: #000;
+}
+
+.discount {
+    color: black; /* Kontrast til gul */
+    background: #f7c52d; /* Kraftig gul (som Adidas/Nike bruger) */
+    padding: 5px 10px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+
+.old_price {
+    text-decoration: line-through;
+    color: grey;
+}
+
+.out_of_stock {
+    opacity: 0.5;
+}
+
+.sold_out {
+    color: red;
+    font-weight: bold;
+}
+
+.product_details {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Giver mellemrum mellem billede og tekst */
+    max-width: 900px; /* Begrænser bredden for bedre layout */
+    margin: 50px auto; /* Centrerer sektionen på siden */
+    padding: 2rem;
+
+}
+
+.product_details img {
+    max-width: 40%; /* Sørger for at billedet ikke bliver for stort */
+    border-radius: 8px; /* Giver lidt afrundede hjørner */
+}
+
+.product_details div {
+    max-width: 60%; /* Tekstområdet fylder resten */
+}
+
+.price {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: red;
+}
+
+.add-to-cart-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Knap styling */
+.add-to-cart {
+    background: #FFC107; /* Kraftig gul farve */
+    color: black;
+    padding: 15px 30px;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out, transform 0.2s ease;
+}
+
+/* Hover-effekt */
+.add-to-cart:hover {
+    background: #E0A800; /* En lidt mørkere gul */
+    transform: scale(1.05);
+}
+
+/* Gør knappen responsiv */
+@media (max-width: 768px) {
+    .add-to-cart {
+        width: 100%;
+        font-size: 1rem;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .product_list_container {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two cards per row */
+        gap: 15px; /* Adds space between cards */
+    }
+
+    .product_card {
+        padding: 10px; /* Reduce padding */
+        font-size: 0.9rem; /* Make text smaller */
+    }
+
+    .product_card img {
+        width: 100%; /* Ensure images scale properly */
+        max-height: 120px; /* Reduce image height */
+        object-fit: cover; /* Crop images to fit */
+    }
+
+    .price {
+        font-size: 1rem; /* Adjust price text size */
+    }
+}
